@@ -1,0 +1,8 @@
+oops is a desing pattern.
+
+four pillers of oops
+
+-->encapsulation
+-->inheritance
+
+
