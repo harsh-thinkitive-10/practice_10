@@ -4,6 +4,7 @@ public class unchacked {
     public static void main(String[] args) {
         Student student = new Student(10,"abc");
         findstudent.find_student(student,11);
+        System.out.println(student);
     }
 }
 
