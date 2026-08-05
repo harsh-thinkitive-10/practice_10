@@ -9,7 +9,7 @@ Advantages:
 		2)maximize cpu utilization
 
 
-Methos of creating threads
+Methods of creating threads
 
 	1) Extend Thread class
 	2) Implement Runnable interface
