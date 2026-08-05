@@ -6,6 +6,7 @@ public class ThreadLifeCycle {
         System.out.println(thread.getState());
 
         thread.start();
+        thread.start();
         System.out.println(thread.getState());
 
         try {

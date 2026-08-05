@@ -1,0 +1,56 @@
+Exception : exception is an event occurs during the execution of the programme that disrupts the normal flow of the program.
+
+			OR
+
+the program stop unexpectedly at runtime also known as exception.
+
+
+without exception handling
+
+Program
+   │
+   ▼
+Exception
+   │
+   ▼
+Program Stops
+
+
+with exception handling
+
+ Program
+   │
+   ▼
+Exception
+   │
+Handled
+   │
+   ▼
+Program Continues
+
+
+Exception Handling : exception handling is a mechanism that allows us to handle runtime errors without terminating the program.
+
+Type of Exception
+
+		1) checked exception --> checked at compile time by compiler.
+		2) unchecked exception --> occurs at runtime and stops program if occurs and not handled.
+
+
+try block : the code that can produce an exception is placed inside the try block.
+
+catch block : the exception object throws by the try block is catch by the catch block
+
+finally block : always executes
+
+| Situation             | finally Executes?             |
+| --------------------- | ----------------------------- |
+| No Exception          | ✅                             |
+| Exception Handled     | ✅                             |
+| Exception Not Handled | ✅ (before program terminates) |
+| return statement      | ✅                             |
+| System.exit()         | ❌                             |
+
+
+throw : throw keyword is used to create new exception object.
+

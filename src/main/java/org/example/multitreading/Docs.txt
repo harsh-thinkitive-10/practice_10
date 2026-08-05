@@ -23,7 +23,7 @@ ex:
 	class Vehicle{
 	}
 
-	//java doesn't supports multiple inheritance
+	//java doesn't support multiple inheritance
 	class Car extends Vehicle ,Thread{
 	}
 

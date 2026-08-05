@@ -1,0 +1,121 @@
+Serialisation : serialization is the process of converting a java object into sequence of bytes.
+
+deserialization : deserialization is the process of converting a sequence of bytes into java object.
+
+java object only stays in memory and destroyed when execution completed.
+
+Java Object
+      │
+      │ Serialization
+      ▼
+Byte Stream
+      │
+      │ Store / Transfer
+      ▼
+Byte Stream
+      │
+      │ Deserialization
+      ▼
+Original Java Object
+
+
+Real world example :
+
+Message object
+
+↓
+
+Serialize
+
+↓
+
+Network
+
+↓
+
+Deserialize
+
+↓
+
+Receiver gets Message object
+
+
+java supports serialization throw the java.io.Serializable interface it is a marker interface (marker interface contains no methods).
+
+
+Steps of Serialization
+
+Suppose
+
+Employee Object
+
+↓
+
+Implements Serializable
+
+↓
+
+ObjectOutputStream
+
+↓
+
+employee.ser
+
+Deserialization
+
+Reverse process.
+
+employee.ser
+
+↓
+
+ObjectInputStream
+
+↓
+
+Employee Object
+
+Complete Flow
+Employee Object
+
+↓
+
+ObjectOutputStream
+
+↓
+
+employee.ser
+
+↓
+
+ObjectInputStream
+
+↓
+
+Employee Object
+
+Serialization
+    ↓
+Object → Byte Stream
+    ↓
+Save to File / Database / Network / Cache
+
+Deserialization
+    ↓
+Byte Stream → Object
+
+Key Classes:
+✔ Serializable
+✔ ObjectOutputStream
+✔ ObjectInputStream
+
+Important Keywords:
+✔ transient
+✔ serialVersionUID
+✔ static
+✔ final
+
+Advanced Topics:
+✔ Custom Serialization (writeObject/readObject)
+✔ Externalizable
+✔ Object Graph Serialization
