@@ -1,0 +1,40 @@
+Reflection :
+
+java reflection is an api that allows a program to inspect and manipulate classes, interfaces, constructor, methods, and fields at runtime.
+
+reflection is a mechanism that allows a java program to inspect, analyze, and manipulate classes, methods, constructor, fields, and annotations during runtime.
+
+normally,
+
+	Student student = new Student();
+	student.display();
+
+	compiler already knows:
+
+		there is a class named Student
+		there is a method name dispay
+
+	what if the class name come from the database
+	like : Employee, Course, Student
+
+	in this case compiler doesn't know which class will be loaded.
+	Reflection allows java to decide this at runtime.
+
+
+Reflection API
+
+java.lang.reflect
+
+| Class       | Purpose                 |
+| ----------- | ----------------------- |
+| Class       | Metadata of class       |
+| Constructor | Constructor information |
+| Method      | Method information      |
+| Field       | Variable information    |
+| Modifier    | public/private/static   |
+| Parameter   | Method parameters       |
+| Array       | Array reflection        |
+
+
+
+
