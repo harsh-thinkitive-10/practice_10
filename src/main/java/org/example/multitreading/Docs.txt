@@ -1,0 +1,124 @@
+Process --> Whole programme
+Thread --> Smallest part of the process
+
+in single threaded program every task executes one by one
+in multithreaded program task can run simultaneously.
+
+Advantages:
+		1)improves performance
+		2)maximize cpu utilization
+
+
+Methos of creating threads
+
+	1) Extend Thread class
+	2) Implement Runnable interface
+
+	(more preferred way is using runnable)
+
+runnable is preferred because java does not supports multiple inheritance.
+
+
+ex:
+	class Vehicle{
+	}
+
+	//java doesn't supports multiple inheritance
+	class Car extends Vehicle ,Thread{
+	}
+
+
+	class Car extends Vehicle implements Runnable{
+	}
+
+Thread methos:
+
+	start() --> create new thread.
+	run() --> contains task and does not create new thread.
+	sleep() --> pauses current thread.
+	join() --> waits for another thread.
+	yield() --> suggest that the scheduler let other thread run.
+	interrupt() --> Request interruption of a thread.
+	isAlive() --> check if thread is still running.
+	getName() --> give the name of the thread.
+	setName() --> set the name of the thread.
+	currentThread() --> returns currently executing thread.
+
+
+Thread Priorities: thread priority depends on priority value.
+
+ex:
+	priority value:
+			1--> min priority
+			2--> norm priority
+			5--> max priority
+	higher the number higher the priority.
+
+Daemon Thread
+
+Daemon thread is a background thread that provides services to User thread.
+it is not responsible for the main work of the application.
+its job is to support other thread.
+
+daemon thread runs in background until jvm stops execution.
+daemon thread run even after main thread is terminate.
+
+
+jvm keeps running as long as the last user thread is alive.
+when all the user thread finish, jvm exits at the point all the daemon thread stops.
+
+Thread life cycle:
+
+a thread passes through several states during its lifetime.
+
+	NEW --> the thread object is created.
+	Runnable --> the thread is ready to run and waiting for CPU scheduling.
+	Running --> CPU selects the thread (run() is called)
+	Waiting --> thread waits for another thread action. (object.wait() thread.join() is called)
+	Timed_Waiting --> Thread waits for a specified duration(Thread.sleep() thread.join() object.wait() is called)
+	Terminated --> Execution of the thread completed.(run() is finished or start() throws IllegalThreadStateException)
+
+NEW
+ |
+ | start()
+ v
+RUNNABLE
+ |
+ | CPU schedules
+ v
+RUNNING
+ |\
+ | \
+ |  \
+ |   \________________________
+ |                            |
+ | sleep()                    | synchronized lock unavailable
+ | wait()                     |
+ | join()                     |
+ |                            |
+ v                            v
+TIMED_WAITING           BLOCKED
+     |                      |
+     | timeout              | lock acquired
+     v                      v
+        RUNNABLE
+            |
+            | run() completes
+            v
+       TERMINATED
+
+
+
+| Feature        | Process                                    | Thread                                         |
+| -------------- | ------------------------------------------ | ---------------------------------------------- |
+| Definition     | Independent program in execution           | Smallest unit of execution inside a process    |
+| Memory         | Separate memory space                      | Shares process memory                          |
+| Communication  | Slower (IPC required)                      | Faster (shared memory)                         |
+| Creation Cost  | High                                       | Low                                            |
+| Context Switch | Expensive                                  | Less expensive                                 |
+| Failure        | One process usually doesn't affect another | An uncaught error can affect the whole process |
+
+
+
+
+
