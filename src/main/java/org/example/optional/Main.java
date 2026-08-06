@@ -68,11 +68,11 @@ public class Main {
 
         //10. filter() --> return the value of the condition is stratified.
         Optional<String> string15 = Optional.ofNullable("Harsh");
-        String string16 = string15.filter();
+//        String string16 = string15.filter();
 
         //11. map() --> transform the contain value.
         Optional<String> string17 = Optional.of("Harsh");
-        Optional<Integer> integer = string17.map(Integer::)
+
 
     }
 }
